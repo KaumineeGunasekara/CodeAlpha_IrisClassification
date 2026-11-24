@@ -20,7 +20,7 @@ df["Species"] = df["Species"].str.replace("Iris-", "", regex=False)
 features = ["SepalLengthCm", "SepalWidthCm", "PetalLengthCm", "PetalWidthCm"]
 
 print("Shape:", df.shape)
-print("Missing values:\n", df.isna().sum().sum(), "| Duplicates:", df.duplicated().sum())
+print("Missing values:", df.isna().sum().sum(), "\nDuplicates:", df.duplicated().sum())
 print(df.groupby("Species")[features].mean().round(2))
 
 # ---- EDA ----
